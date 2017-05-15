@@ -1,0 +1,95 @@
+/* 
+
+*/
+
+html, body {
+    margin: 1px;/*1em;*/
+    height: 100%;
+}
+
+/* setup the overall map size*/
+#map {
+  width: 100%;
+  height: 95%;
+  padding: 0;
+  margin: 0;
+}
+
+/* style the displayed mouse coordinates*/
+#coordinates{
+    text-align: left;   
+    font-family: Arial;
+    color: gray;
+    font-size: 11px;   
+}
+
+/* style the route */
+.PolylineRoute {
+  stroke: darkgreen;
+  stroke-dasharray: 3,4; 
+  stroke-width: 3;      
+}
+
+/* generated button style */
+.btn {
+  
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 11;
+  -moz-border-radius: 11;
+  border-radius: 11px;
+  font-family: Papyrus;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* style information text */
+.infotext  {
+    color: darkred;
+    font-family: Papyrus;
+    font-size: 16px;
+    font-weight:bold
+}
+
+/* style easy button */
+#customButton{
+    height: auto;
+    width: 120px;
+    background-color: #3498db;
+    text-align: center;
+    position: relative;
+    border-radius: 4px;
+    border: solid 0px transparent;
+    padding-top:0px;
+    padding-bottom:0px;
+ 
+}
+#customButton:hover{
+    background-color: #3cb0fd;
+}
+
+/* style the text on the easy buttons */
+.easytext{
+  font-family: Papyrus;
+  color: #ffffff;
+  font-size: 12px;
+    padding-top:0px;
+    padding-bottom:0px;  
+}
