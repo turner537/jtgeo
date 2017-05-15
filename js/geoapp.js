@@ -61,7 +61,7 @@ var southWest = L.latLng(-90, -180),
 	  	  coordinates.innerHTML = "latitude: " + lat[1] + "&deg; longitude: " + lng[0]+"&deg;";
     });
 
-    //button to locate current position:
+ /*   //button to locate current position:
     L.easyButton({id:'customButton',
         states:[{
         icon: '<span class="easytext">Locator</span>',
@@ -84,7 +84,7 @@ var southWest = L.latLng(-90, -180),
                 //markerCurrentLocation.openPopup();
             });
        }     }]
-    }).addTo(map);    
+    }).addTo(map);    */
     
      
     //about button 
