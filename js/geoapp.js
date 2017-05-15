@@ -28,7 +28,8 @@ var southWest = L.latLng(-90, -180),
         attribution: 'Stamen Watercolor'
     });
     //Stamen Toner
-    var stamenToner  = L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {
+//    var stamenToner  = L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {
+    var stamenToner  = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
         attribution: 'Stamen Toner'
     });	
     
