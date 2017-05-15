@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+ 
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+    <title>jtGeo</title>
+    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+
+    <!-- links to external CSS and Javascript files go here -->
+	<link rel="stylesheet" type="text/css" href="css/geoapp.css">
+
+	<!-- import Leaflet here -->
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.3/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet/v1.0.3/leaflet.js"></script>
+    
+	<!-- import GeoJSON datasets -->
+    <script src="data/geojson_data.js"></script>
+
+	<!-- import the leaflet-based app -->	
+	<script src="js/geoapp.js"></script>
+
+	<!-- specify an icon for the page -->
+    <link rel="icon" href="images/dot.png">
+    
+    <!-- import jQuery -->
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.0.min.js"></script>
+    
+    <!--import EasyButton -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.css">
+    <script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
+
+</head>
+
+<!-- note the onload that calls a function in app_leaflet.js -->
+<body onload="initMapLL();">
+
+
+    <!--map container-->
+    <div id="map"></div>
+    
+    <!--coordinates container-->
+    <div id="coordinates"><br></div>   
+
+
+	
+</body>
+</html>
