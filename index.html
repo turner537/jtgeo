@@ -6,9 +6,11 @@
 	<meta charset="UTF-8">
     <title>jtGeo</title>
     
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">    
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">   
+    <meta name="description" content="Geospatial Consultancy and Software">    
+    <meta name="keywords" content="FME, GIS, geospatial, geodesy, marine, snakegrid, vorf, navigation, positioning">
 
-	<link rel="stylesheet" type="text/css" href="css/geoapp.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 	<!-- import Leaflet here -->
 <!--	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v1.0.3/leaflet.css" />
@@ -17,11 +19,11 @@
     <!--https://cdnjs.com/libraries/leaflet-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.css" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.0.3/leaflet.js"></script> 
-	<!-- import GeoJSON datasets -->
+	<!-- import data -->
     <script src="data/data.js"></script>
 
 	<!-- import the leaflet-based app -->	
-	<script src="js/geoapp.js"></script>
+	<script src="js/pagecode.js"></script>
 
 	<!-- specify an icon for the page -->
     <link rel="icon" href="images/dot.png">
@@ -32,20 +34,44 @@
     <!--import EasyButton -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.css">
     <script src="https://unpkg.com/leaflet-easybutton@2.0.0/src/easy-button.js"></script>
+    
+    <!--import bootstrap-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 </head>
 
 <!-- note the onload that calls a function in app_leaflet.js -->
 <body onload="initMapLL();">
 
+<!-- Modal https://www.w3schools.com/bootstrap/bootstrap_modal.asp  -->
+    <div id="aboutModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">About jtGeo</h4>
+          </div>
+          <div class="modal-body">
+            <p>jtGeo Ltd. is an independent UK-based company specialising in geospatial consultancy supported by bespoke software development.</p>
+            <p>With expertise in land, marine and space domains, jtGeo delivers significant mission-critical projects where accuracy and rigour are essential.  Recent projects include coordinate reprojection software libraries for UK mainline rail routes, development of advanced FME plug-ins, and complex algorithms for deriving oil and gas sector business intelligence from marine AIS.</p>
+            <p>Clients include UCL-Business, Network Rail and Seisintel.</p>
+            <br>
+            <copytext>&copy; 2017 jtGeo</copytext>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--map container-->
     <div id="map"></div>
     
     <!--coordinates container-->
     <div id="coordinates"><br></div>   
-
-
 	
 </body>
 </html>

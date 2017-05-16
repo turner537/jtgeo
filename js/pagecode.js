@@ -1,6 +1,26 @@
 
-function initMapLL(){
+function padzero(innum){
+    if (innum<10)innum="0"+innum;
+    return innum;
+}
 
+function latlon2text(inlat,inlon){
+    hemlon="E";
+    if (inlon < 0 ){hemlon="W"}
+    hemlat="N";
+    if (inlat < 0 ){hemlat="S"}
+    inlat=Math.abs(inlat);
+    inlon=Math.abs(inlon);
+    deglat=parseInt(inlat);
+    deglon=parseInt(inlon);
+    inlat=(inlat-deglat)*60.0;
+    inlon=(inlon-deglon)*60.0;
+    minlat=parseInt(inlat);
+    minlon=parseInt(inlon);
+    return padzero(deglat)+'&deg;'+padzero(minlat)+'\''+hemlat+' '+padzero(deglon)+'&deg;'+padzero(minlon)+'\''+hemlon;
+}
+
+function initMapLL(){
     
     //setup map bounds 
 var southWest = L.latLng(-90, -180),
@@ -30,7 +50,7 @@ var southWest = L.latLng(-90, -180),
     //Stamen Toner
 //    var stamenToner  = L.tileLayer('http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png', {
     var stamenToner  = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}.png', {
-        attribution: 'Stamen Toner'
+        attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, under <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a>. Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>'
     });	
     
     //create the map, note we are not using the maxBounds as this may prevent the users current location being panned to:
@@ -38,8 +58,8 @@ var southWest = L.latLng(-90, -180),
 	var map = L.map('map', {center: [63.66576, -4.746], zoom: 4, layers: [stamenToner]});
     
 	var baseMaps = {
-		"osm": osm,
-		"stamen": stamen,
+		//"osm": osm,
+	//	"stamen": stamen,
 		"stamenToner": stamenToner
 	};
     
@@ -50,7 +70,6 @@ var southWest = L.latLng(-90, -180),
     map.on('move', function(e) {
         maptitle.setLatLng([map.getBounds().getNorth(),map.getCenter().lng]);
         });
-    
 
     //when the mouse moves on the map, update the coordinates
 	map.on('mousemove', function(e){
@@ -58,44 +77,17 @@ var southWest = L.latLng(-90, -180),
       var coord = e.latlng.toString().split(',');
       var lat = coord[0].split('(');
       var lng = coord[1].split(')');
-	  	  coordinates.innerHTML = "latitude: " + lat[1] + "&deg; longitude: " + lng[0]+"&deg;";
+      
+	  coordinates.innerHTML = latlon2text(lat[1],lng[0]);
     });
-
- /*   //button to locate current position:
-    L.easyButton({id:'customButton',
-        states:[{
-        icon: '<span class="easytext">Locator</span>',
-        title: 'Where are you?',
-        onClick: function(btn,map) {
-        map.locate().on('locationfound', function(e){
-                if (markerCurrentLocation!=null){
-                    map.removeLayer(markerCurrentLocation);
-                    map.removeControl(markerCurrentLocationControl);
-                }
-                //create marker and assign pop up text:
-                markerCurrentLocation = L.marker([e.latitude, e.longitude]);
-                markerCurrentLocation.bindTooltip('<span class="infotext">You are here</span>');
-                map.addLayer(markerCurrentLocation);
-                var loclayers = {
-                    "Current Location": markerCurrentLocation
-                };	      
-                markerCurrentLocationControl=L.control.layers(null,loclayers).addTo(map);   
-                //zoom2All();                
-                //markerCurrentLocation.openPopup();
-            });
-       }     }]
-    }).addTo(map);    */
-    
-     
+  
     //about button 
     L.easyButton({id:'customButton',
         states:[{
         icon: '<span class="easytext">About</span>',
         title: 'About',
         onClick: function(btn,map) {
-            alert("jtGeo provides specialist geospatial consultancy and bespoke software.\n\nWith expertise in land, marine and space domains, jtGeo delivers significant mission-critical projects.  These include coordinate reprojection software libraries for UK mainline rail routes, bespoke FME plug-ins, and complex algorithms for deriving oil and gas sector business intelligence from marine AIS.\n\nClients include UCL-Business, Network Rail and Seisintel.");
-         
-            
+            $('#aboutModal').modal('toggle');
         }     }]
     }).addTo(map);      
     

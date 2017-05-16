@@ -7,6 +7,20 @@ html, body {
     height: 100%;
 }
 
+h2{
+    
+}
+copytext{
+  font-family: Arial;
+  color: #000000;
+  font-size: .75em;        
+  display:block;
+}
+p{
+  font-family: Arial;
+  color: #000000;
+  font-size: 1em;    
+}
 /* setup the overall map size*/
 #map {
   width: 100%;
