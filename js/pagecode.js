@@ -19,7 +19,7 @@ function latlon2text(inlat,inlon){
     minlon=parseInt(inlon);
     return padzero(deglat)+'&deg;'+padzero(minlat)+'\''+hemlat+' '+padzero(deglon)+'&deg;'+padzero(minlon)+'\''+hemlon;
 }
-
+    
 function initMapLL(){
     
     //setup map bounds 
@@ -92,7 +92,7 @@ var southWest = L.latLng(-90, -180),
     }).addTo(map);      
     
     //button to email the site admin:
-    L.easyButton({id:'customButton',
+    var eb = L.easyButton({id:'customButton',
         states:[{
         icon: '<span class="easytext">Contact</span>',
         title: 'Contact jtGeo',
@@ -100,7 +100,6 @@ var southWest = L.latLng(-90, -180),
             window.location.href = "mailto:jim@jtgeo.co.uk?Subject=jtGeo";
         }     }]
     }).addTo(map);       
-
 }
 
 
