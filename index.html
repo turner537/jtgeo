@@ -40,6 +40,18 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109651666-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-109651666-1');
+    </script>    
+    
+    
+    
 </head>
 
 <!-- note the onload that calls a function in app_leaflet.js -->
@@ -52,12 +64,14 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">About jtGeo</h4>
+            <h4 class="modal-title">About</h4>
           </div>
           <div class="modal-body">
             <p>jtGeo Ltd. is an independent UK-based company specialising in geospatial consultancy supported by bespoke software development.</p>
-            <p>With expertise in both land and marine domains, jtGeo delivers significant mission-critical projects where accuracy and rigour are essential.  Recent projects include coordinate reprojection software libraries for UK mainline rail routes, development of advanced FME plug-ins, and complex algorithms for deriving oil and gas sector business intelligence from marine AIS.</p>
+            <p>With expertise in both land and marine domains, jtGeo delivers significant mission-critical projects where accuracy and rigour are essential. Recent projects include the design and development of software for the <a href="http://snakegrid.org/" target="_blank">SnakeGrid</a> coordinate system, development of advanced <a href="https://www.safe.com/" target="_blank">FME</a> plug-ins and workspaces, and complex algorithms for deriving oil and gas sector business intelligence from marine AIS.</p>
             <p>Clients include <a href="http://www.uclb.com/technologies/snakegrid-local-coordinate-mapping" target="_blank">UCL-Business</a>, <a href="https://www.networkrail.co.uk/" target="_blank">Network Rail</a>, <a href="http://hs2.org.uk" target="_blank">HS2</a> and <a href="https://www.seisintel.com/" target="_blank">Seisintel</a>.</p>
+            <br>
+            <p><a href="https://twitter.com/jtGeo3?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @jtGeo3</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
             <br>
             <copytext>&copy; 2017 jtGeo</copytext>
           </div>
