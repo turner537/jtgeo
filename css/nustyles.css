@@ -1,0 +1,129 @@
+/* 
+
+*/
+
+html{
+    
+}
+
+body {
+   margin: 1px;
+   padding:1px;
+   height:100%;
+   width: 100%;
+   background-color: white;
+   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+   font-size: 1.25em;
+}
+
+
+header { 
+
+    background-image: url("../images/jh.jpeg");
+    background-repeat: repeat-x;
+
+    width:100%;
+    height:100px; 
+    background-color: #8daca6;
+}
+#jtgeologo
+{
+    display: block;
+    width: 9em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sidebar {
+  float: left;
+  width: 10em;
+  min-height: 100%;
+  background-color: #8daca6;/*EAEDED;*/
+  
+    
+}
+ul {
+    list-style-type: none;
+}
+li {
+    text-align: right;
+    margin: 1em ;
+}
+
+#rightbar {
+  float: right;
+  width: 15em;
+  min-height: 100%;
+   
+}
+
+#explain
+{
+    font-size: .75em;
+
+}
+
+main{
+    margin-left: 11em;
+    margin-right: 16em;
+    margin-top: 2em;
+    background-color: white;
+    min-height: 100%;
+}
+
+/* unvisited link */
+a:link {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+    color: hotpink;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+copytext{
+   font-size: 0.5em;
+    
+}
+
+.align-right
+{
+    text-align: right;
+}
+
+.img{
+    position:relative;
+}
+.img .xmark{
+    display: none;
+    position:absolute;
+    top:0px;
+    left:0px;
+}
+#overlay {
+    display: none; 
+}
+#hs2
+{
+    cursor: crosshair;
+    
+}
