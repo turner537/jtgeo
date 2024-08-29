@@ -40,9 +40,11 @@ var southWest = L.latLng(-90, -180),
         
     //setup the basemaps:
     //Openstreetmap
-    var osm  = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+//    var osm  = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    var osm  = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     });
+		
     //Stamen WaterColor
     var stamen  = L.tileLayer('http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.png', {
         attribution: 'Stamen Watercolor'
