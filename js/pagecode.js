@@ -55,7 +55,8 @@ var southWest = L.latLng(-90, -180),
     
     //create the map, note we are not using the maxBounds as this may prevent the users current location being panned to:
 	//var map = L.map('map', {center: [51.52191, -0.12649], zoom: 2, layers: [stamenToner]});
-	var map = L.map('map', {center: [63.66576, -4.746], zoom: 4, layers: [stamenToner]});
+	//var map = L.map('map', {center: [63.66576, -4.746], zoom: 4, layers: [stamenToner]});
+	var map = L.map('map', {center: [63.66576, -4.746], zoom: 4, layers: [osm]});
     
 	var baseMaps = {
 		//"osm": osm,
