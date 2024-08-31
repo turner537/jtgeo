@@ -39,17 +39,7 @@
     <!--import bootstrap-->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109651666-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-109651666-1');
-    </script>    
-    
+   
     <script type="application/ld+json">
     {
       "@context": "http://schema.org",
@@ -77,13 +67,15 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title">About</h4>
+            <h4 class="modal-title"><b>Dr James Turner CEng MCInstCES</b></h4>
           </div>
           <div class="modal-body">
-            <p>jtGeo Ltd. is an independent UK-based company specialising in geospatial consultancy alongside highly bespoke software development.  Further services include first-class support and training.</p>
-            <p>With expertise in both land and marine domains, jtGeo delivers significant mission-critical projects where accuracy and rigour are essential. Recent projects include the design and development of software for the <a href="http://snakegrid.org/" target="_blank">SnakeGrid</a> coordinate system, development of advanced <a href="https://www.safe.com/" target="_blank">FME</a> plug-ins and workspaces, and complex algorithms for deriving oil and gas sector business intelligence from marine AIS.</p>
-            <p>Clients include <a href="http://www.uclb.com/technologies/snakegrid-local-coordinate-mapping" target="_blank">UCL-Business</a>, <a href="https://www.networkrail.co.uk/" target="_blank">Network Rail</a>, <a href="http://hs2.org.uk" target="_blank">HS2</a> and <a href="https://www.seisintel.com/" target="_blank">Seisintel</a>.</p>
-            <br>            <p><ul style="list-style-type:none"><li><a href="https://www.linkedin.com/company/11241797" target="_blank">jtGeo on LinkedIn</a></li><li><a href="https://twitter.com/jtGeoUK?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @jtGeoUK</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></li></ul></p><br><copytext>&copy; 2017 jtGeo</copytext>
+			<b>Dr James (Jim) Turner</b> is a chartered geospatial engineer, academic, and survey professional with over 20 years experience in a variety of senior roles in both the marine and land survey disciplines.  This includes acting as technical authority for engineering survey on HS2, and developing technical solutions focused on coordinate systems and datums for engineering survey, hydrographic survey and mapping. <br><br>Please contact jim@jtgeo.co.uk for consultancy services.
+			<br>
+			<br>Research profile: <a href="https://orcid.org/0009-0002-4567-9267" target="_blank"><b>Dr James F. Turner CEng</b></a>
+			<br>Linkedin profile: <a href="https://www.linkedin.com/in/jim-turner-99669145/" target="_blank"><b>Jim Turner</b></a>
+			<br>
+			
           </div>
           <div class="modal-footer">
             <button type="button" class="btn" data-dismiss="modal">Close</button>
@@ -91,6 +83,39 @@
         </div>
       </div>
     </div>
+	
+	
+<!-- Modal https://www.w3schools.com/bootstrap/bootstrap_modal.asp  -->
+    <div id="projectsModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title"><b>Dr James Turner CEng MCInstCES</b></h4>
+          </div>
+          <div class="modal-body">
+			<b>Selected projects:</b>
+            <ul>
+			<li><b>Vertical Offshore Reference Frames (VORF):</b> Technical lead developing the GNSS-compatible reference Chart Datum surface models for nautical charting in UK and Ireland, used by both the UKHO and Maritime & Coastguard Agency (<a href="https://www.ucl.ac.uk/civil-environmental-geomatic-engineering/research/groups-centres-and-sections/vertical-offshore-reference-frames-vorf" target="_blank">further info</a>)</li>
+			<li><b>VORF - Global:</b> Technical lead developing global models of tidal levels for the UK Hydrographic Office</li>
+			<li><b>UCL SnakeGrid:</b> Lead developer of SnakeGrid PointWise, SnakeMaker, and SnakeGrid Projector for FME (<a href="https://snakegrid.org/" target="_blank">link</a>)</li>
+			<li><b>Fugro Current Analysis Tool (FCAT):</b> Lead developer of software tool for tide and current analysis for optimisation of marine seismic survey operations</li>
+			<li><b>Seisintel:</b> Development of AIS processing, analysis, and reporting functions (<a href="https://www.seisintel.com/" target="_blank">link</a>)</li>
+			<li><b>High Speed 2:</b></li> <ul><li>Development of the Horizontal and Vertical Engineering Coordinate System for all infrastructure design and construction (<a href="https://learninglegacy.hs2.org.uk/document/advances-in-engineering-survey-grid-transformations-for-rail-infrastructure/" target="_blank">further info</a>)</li>
+			<li>Development and validation of Engineering Coordinate System definitions for interfacing projects (<a href="https://learninglegacy.hs2.org.uk/document/streamlining-design-coordination-connecting-high-speed-two-to-the-west-coast-mainline/" target="_blank">further info</a>)</li>
+			<li>EPSG:9300, first SnakeGrid to be submitted to the global coordinate system registry (<a href="https://epsg.org/crs_9300/HS2-Survey-Grid.html" target="_blank">EPSG record</a>)</li></ul>
+			<li><b>RICS:</b> Peer review of <i>Use of GNSS in land surveying and mapping</i>, 3rd edition (<a href="https://www.rics.org/profession-standards/rics-standards-and-guidance/sector-standards/land-standards/guidelines-for-the-use-of-gnss-in-land-surveying-and-mapping" target="_blank">link</a>)</li>
+			</ul>
+		  
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>	
+	
 
     <!--map container-->
     <div id="map"></div>
