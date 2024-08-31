@@ -3,7 +3,7 @@
 */
 
 html, body {
-    margin: 1px;/*1em;*/
+    margin: 10px;/*1em;*/
     height: 100%;
 }
 
@@ -32,9 +32,9 @@ p{
 /* style the displayed mouse coordinates*/
 #coordinates{
     text-align: left;   
-    font-family: Arial;
+    font-family: Courier;
     color: gray;
-    font-size: 11px;   
+    font-size: 2em;/*11px;   */
 }
 
 
@@ -57,7 +57,7 @@ p{
 /* style information text */
 .infotext  {
     color: darkred;
-    font-family: Papyrus;
+    font-family: Arial;/*Papyrus;*/
     font-size: 16px;
     font-weight:bold
 }
@@ -65,7 +65,7 @@ p{
 /* style easy button */
 #customButton{
     height: auto;
-    width: 120px;
+    width: 200px;
     background-color: #3498db;
     text-align: center;
     position: relative;
@@ -81,9 +81,9 @@ p{
 
 /* style the text on the easy buttons */
 .easytext{
-  font-family: Papyrus;
+  font-family: Arial;/*Papyrus;*/
   color: #ffffff;
-  font-size: 12px;
+  font-size: 2em;/*12px;*/
     padding-top:0px;
     padding-bottom:0px;  
 }
