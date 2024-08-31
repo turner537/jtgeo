@@ -19,6 +19,7 @@ function latlon2text(inlat,inlon){
     minlon=parseInt(inlon);
     return padzero(deglat)+'&deg;'+padzero(minlat)+'\''+hemlat+' '+padzero(deglon)+'&deg;'+padzero(minlon)+'\''+hemlon;
 }
+
     
 function initMapLL(){
     
@@ -58,7 +59,8 @@ var southWest = L.latLng(-90, -180),
     //create the map, note we are not using the maxBounds as this may prevent the users current location being panned to:
 	//var map = L.map('map', {center: [51.52191, -0.12649], zoom: 2, layers: [stamenToner]});
 	//var map = L.map('map', {center: [63.66576, -4.746], zoom: 4, layers: [stamenToner]});
-	var map = L.map('map', {center: [63.66576, -4.746], zoom: 4, layers: [osm]});
+	//var map = L.map('map', {center: [63.66576, -4.746], zoom: 4, layers: [osm]});
+	var map = L.map('map', {center: [53.5, -2], zoom: 5, layers: [osm]});
     
 	var baseMaps = {
 		//"osm": osm,
@@ -92,7 +94,18 @@ var southWest = L.latLng(-90, -180),
         onClick: function(btn,map) {
             $('#aboutModal').modal('toggle');
         }     }]
-    }).addTo(map);      
+    }).addTo(map);
+
+    //projects button 
+    L.easyButton({id:'customButton',
+        states:[{
+        icon: '<span class="easytext">Projects</span>',
+        title: 'Projects',
+        onClick: function(btn,map) {
+            $('#projectsModal').modal('toggle');
+        }     }]
+    }).addTo(map);  
+
     
     //button to email the site admin:
     var eb = L.easyButton({id:'customButton',
@@ -102,7 +115,6 @@ var southWest = L.latLng(-90, -180),
         onClick: function(btn,map) {
             window.location.href = "mailto:jim@jtgeo.co.uk?Subject=jtGeo";
         }     }]
-    }).addTo(map);       
+    }).addTo(map);    
+	
 }
-
-
