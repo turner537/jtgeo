@@ -87,24 +87,24 @@ var southWest = L.latLng(-90, -180),
     });
   
     //about button 
-    L.easyButton({id:'customButton',
-        states:[{
-        icon: '<span class="easytext">About</span>',
-        title: 'About',
-        onClick: function(btn,map) {
-            $('#aboutModal').modal('toggle');
-        }     }]
-    }).addTo(map);
+    //L.easyButton({id:'customButton',
+    //    states:[{
+    //    icon: '<span class="easytext">About</span>',
+    //    title: 'About',
+    //    onClick: function(btn,map) {
+    //        $('#aboutModal').modal('toggle');
+    //    }     }]
+    //}).addTo(map);
 
     //projects button 
-    L.easyButton({id:'customButton',
-        states:[{
-        icon: '<span class="easytext">Projects</span>',
-        title: 'Projects',
-        onClick: function(btn,map) {
-            $('#projectsModal').modal('toggle');
-        }     }]
-    }).addTo(map);  
+    //L.easyButton({id:'customButton',
+    //    states:[{
+    //    icon: '<span class="easytext">Projects</span>',
+    //    title: 'Projects',
+    //    onClick: function(btn,map) {
+    //        $('#projectsModal').modal('toggle');
+    //    }     }]
+    //}).addTo(map);  
 
     
     //button to email the site admin:
